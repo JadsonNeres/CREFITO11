@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'botoes-login',
+    loadChildren: () => import('./botoes-login/botoes-login.module').then( m => m.BotoesLoginPageModule)
+  },
+  {
+    path: 'sem-senha',
+    loadChildren: () => import('./sem-senha/sem-senha.module').then( m => m.SemSenhaPageModule)
+  },
+  {
+    path: 'com-senha',
+    loadChildren: () => import('./com-senha/com-senha.module').then( m => m.ComSenhaPageModule)
+  },
 ];
 
 @NgModule({
